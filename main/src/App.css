@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+}
+main,
+article {
+  grid-template-columns: 1fr;
+  isolation: isolate;
+}
+main > *,
+article > * {
+  grid-column: -1/1;
+  grid-row: -1/1;
+}
+
+.triangle-container::after,
+.triangle-container::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: red;
+}
+
+.triangle-container::after {
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+.triangle-container::before {
+  top: 20px;
+  right: 0;
+  clip-path: polygon(100% 0, 0 52%, 100% 100%);
+}

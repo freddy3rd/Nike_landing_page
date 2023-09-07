@@ -1,0 +1,30 @@
+.articleTwo_image {
+  object-position: 0 80%;
+  -webkit-mask-image: url("./assets/vector_paint_1.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.saleBannerImage {
+  rotate: -10deg;
+  mask-image: linear-gradient(black, transparent);
+  -webkit-mask-image: linear-gradient(black, transparent);
+}
+
+/* animation: name duration timing-function delay iteration-count direction
+    fill-mode; */
+
+.main-image {
+  animation: bounce 1000ms ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bounce {
+  from {
+    transform: translatey(0);
+  }
+
+  to {
+    transform: translatey(5px);
+  }
+}
