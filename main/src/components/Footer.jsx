@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/nike.png";
+import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 export default function Footer() {
   return (
     <div className="md:grid md:grid-cols-2  px-4 content-center text-slate-50 w-full relative mt-10">
@@ -57,11 +58,23 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className=" col-span-2 flex flex-col-reverse md:flex-row items-center justify-between py-4">
+      <div className=" col-span-2 flex flex-col-reverse gap-2 md:flex-row items-center justify-between py-4">
         <span>2020 Nike Inc. All Right Reserved. </span>
-        <ul className="flex">
-          {[1, 2, 3, 4].map((data) => (
-            <li key={data}>{data}</li>
+        <span>
+          <i>Designed By:</i> happywebdev
+        </span>
+        <ul className="flex gap-2">
+          {[
+            [
+              { logo: <FaInstagram /> },
+              "https://www.instagram.com/happywebdev/",
+            ],
+            [{ logo: <FaTwitter /> }, "/"],
+            [{ logo: <FaFacebook /> }, "/"],
+          ].map(([data, url], index) => (
+            <a href={url} target="_blank" key={index}>
+              {data.logo}
+            </a>
           ))}
         </ul>
       </div>

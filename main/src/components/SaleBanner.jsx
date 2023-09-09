@@ -29,7 +29,7 @@ export default function SaleBanner() {
           className=" absolute md:z-10 -z-10 md:-right-[35%] md:-bottom-[50%] h-[320px] saleBannerImage "
         />
       </div>
-      <div className="w-full h-[100px] grid md:grid-cols-4 grid-cols-2 gap-4 max-w-[1200px]">
+      <motion.div className="w-full grid md:grid-cols-4 grid-cols-2 gap-4 max-w-[1200px]">
         {[
           ["Free Delivery", "From $29.99", { mark: <FaShippingFast /> }],
           ["Free Withdrawal", "In Store", { mark: <FaShieldAlt /> }],
@@ -55,7 +55,7 @@ export default function SaleBanner() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

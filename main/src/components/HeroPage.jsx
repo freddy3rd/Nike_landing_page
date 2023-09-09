@@ -45,20 +45,17 @@ export default function HeroPage() {
           {data.map((data) => {
             if (data.id === id) {
               return (
-                <>
-                  <motion.h1
-                    animate={{
-                      opacity: [0, 1],
-                      // scale: [0.5, 1],
-                      y: [-50, 0],
-                    }}
-                    transition={{ duration: 0.5 }}
-                    key={data.id}
-                    className="uppercase md:text-8xl text-7xl font-extrabold -z-10 opacity-25 p-4 w-full max-w-5xl text-center"
-                  >
-                    {data.name}
-                  </motion.h1>
-                </>
+                <motion.h1
+                  key={crypto.randomUUID()}
+                  animate={{
+                    opacity: [0, 1],
+                    y: [-50, 0],
+                  }}
+                  transition={{ duration: 0.5 }}
+                  className="uppercase md:text-8xl text-7xl font-extrabold -z-10 opacity-25 p-4 w-full max-w-5xl text-center"
+                >
+                  {data.name}
+                </motion.h1>
               );
             }
           })}
@@ -70,7 +67,7 @@ export default function HeroPage() {
           if (data.id === id) {
             return (
               <div
-                key={data.name}
+                key={crypto.randomUUID()}
                 className="flex md:flex-row flex-col justify-center items-center h-[max-content] relative overflow-hidden"
               >
                 <motion.div
@@ -126,6 +123,7 @@ export default function HeroPage() {
             );
           }
         })}
+
         <div className=" w-full px-4 mt-4">
           <Carousel setId={setId} />
         </div>
