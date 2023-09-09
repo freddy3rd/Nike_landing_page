@@ -90,7 +90,7 @@ export default function HeroPage() {
                   />
                 </motion.div>
                 <div className="text-slate-50 font-extrabold  flex flex-col space-y-6 px-4 w-full ">
-                  <motion.div className="uppercase text-4xl tracking-widest w-[20ch] overflow-hidden relative">
+                  <motion.div className="uppercase md:text-4xl text-3xl tracking-widest w-[20ch] overflow-hidden relative">
                     <motion.p
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}

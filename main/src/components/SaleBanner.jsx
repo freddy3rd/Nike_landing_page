@@ -26,7 +26,7 @@ export default function SaleBanner() {
         <img
           src={img}
           alt=""
-          className=" absolute md:z-10 -z-10 md:-right-[35%] md:-bottom-[50%] -right-[40%] -bottom-[5%] h-[300px] saleBannerImage aspect-video"
+          className=" absolute md:z-10 -z-10 md:-right-[35%] md:-bottom-[50%] h-[320px] saleBannerImage "
         />
       </div>
       <div className="w-full h-[100px] grid md:grid-cols-4 grid-cols-2 gap-4 max-w-[1200px]">

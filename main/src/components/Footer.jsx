@@ -3,11 +3,11 @@ import img from "../assets/nike.png";
 export default function Footer() {
   return (
     <div className="md:grid md:grid-cols-2  px-4 content-center text-slate-50 w-full relative mt-10">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 ">
         <h1 className="text-4xl font-bold flex-1 self-start">
           Let's Stay in Touch
         </h1>
-        <div className="w-full md:max-w-[max-content] relative flex items-center py-4">
+        <div className="w-full md:max-w-[max-content] relative flex items-center mt-4">
           <input
             type="text"
             placeholder="Enter Email"
@@ -19,11 +19,11 @@ export default function Footer() {
             Subscribe
           </button>
         </div>
-        <div className="w-1/2 mt-10 self-center md:self-start">
-          <img src={img} alt="" className="w-full h-full object-cover" />
+        <div className="w-1/2 self-center md:self-start p-4">
+          <img src={img} alt="" className=" w-full h-full object-cover" />
         </div>
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-2 gap-2  mt-3">
+      <div className="grid md:grid-cols-3 grid-cols-2 gap-2 ">
         {[
           ["SHOP", { list: ["Mens", "Womens", "New Arrival"] }],
           ["OUR SERVICES", { list: ["Gift Card", "Maintain & Repair"] }],
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className=" col-span-2 flex justify-between py-4">
+      <div className=" col-span-2 flex flex-col-reverse md:flex-row items-center justify-between py-4">
         <span>2020 Nike Inc. All Right Reserved. </span>
         <ul className="flex">
           {[1, 2, 3, 4].map((data) => (
